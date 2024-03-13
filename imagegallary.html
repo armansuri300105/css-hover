@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image gallary hover animation</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container .box img {
+            width: 30px;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin: 2px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .box:hover img {
+            width: 500px;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="images/wp5347436-minions-4k-wallpapers.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/wp5347443-minions-4k-wallpapers.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/wp5347448-minions-4k-wallpapers.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/wp5347451-minions-4k-wallpapers.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/wp5347455-minions-4k-wallpapers.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

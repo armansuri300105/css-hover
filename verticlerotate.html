@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verticle rotate hover animation</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            transform: rotateY(0deg);
+            transition: all 1s ease;
+        }
+
+        .detail {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            transform: rotateY(90deg);
+            transition: all 1s ease;
+            top: 0;
+        }
+
+        .detail h1 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 800;
+            color: white;
+        }
+
+        .detail p {
+            font-size: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .box:hover img {
+            transform: rotateY(-90deg);
+            opacity: 0.5;
+        }
+
+        .box:hover .detail {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/img2.webp" alt="">
+        <div class="detail">
+            <h1>Detail of the image</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eligendi nesciunt, saepe aspernatur
+                earum, incidunt impedit cumque rem dignissimos harum corporis ut perferendis explicabo veritatis alias
+                hic? Optio, aliquam earum.</p>
+        </div>
+    </div>
+</body>
+
+</html>

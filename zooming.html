@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zooming hover effect</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            margin: 100px;
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            transform: rotate(0deg);
+            transition: all 1s ease;
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            transform: scale(0);
+            margin: 100px;
+        }
+
+        .box div h1 {
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .box div p {
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .box:hover img {
+            align-self: center;
+            transform: rotate(360deg) scale(0);
+        }
+
+        .box:hover div {
+            transform: scale(1);
+            transition: transform 1s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/img2.webp" alt="">
+        <div class="detail">
+            <h1>Detail of the image</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur temporibus vel, illum consequatur
+                minus provident dicta. Sequi assumenda voluptas sit.</p>
+        </div>
+    </div>
+</body>
+
+</html>

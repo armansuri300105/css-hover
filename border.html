@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border hover animation</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 100px;
+        }
+
+        .box img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all 0.5s ease;
+        }
+
+        .box .detail {
+            position: absolute;
+            width: 100%;
+            bottom: 10%;
+            left: 10%;
+        }
+
+        .box .detail h1 {
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            margin: 0;
+        }
+
+        .box .detail :first-child {
+            position: absolute;
+        }
+
+        .box .detail :nth-child(2) {
+            opacity: 0;
+        }
+
+        .box:hover img {
+            transform: scale(1.05);
+            filter: blur(2px);
+        }
+
+        .box:hover .detail :nth-child(2) {
+            opacity: 1;
+            transition: all 0.5s;
+        }
+
+        .box:hover .detail :first-child {
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .box:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 5%;
+            left: 5%;
+            width: 88%;
+            height: 90%;
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+            transform: translateX(-106%);
+            transition: all 0.5s ease;
+        }
+
+        .box:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 5%;
+            right: 5%;
+            width: 88%;
+            height: 90%;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+            transform: translateY(-108%);
+            transition: all 0.5s ease;
+        }
+
+        .box:hover:before {
+            transform: translateX(0);
+        }
+
+        .box:hover:after {
+            transform: translatey(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/img2.webp" alt="">
+        <div class="detail">
+            <h1>User</h1>
+            <h1>Developer</h1>
+        </div>
+    </div>
+</body>
+
+</html>
